@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 @Profile("chromeLowResolution")
 public class EducationalVideosPageLr extends EducationalVideosPage {
 
+
+
     @Autowired
     public EducationalVideosPageLr(WebDriver driver) {
         super(driver);
@@ -17,7 +19,9 @@ public class EducationalVideosPageLr extends EducationalVideosPage {
     @Override
     public void playChosenVideo() {
         driver.switchTo().frame(videoPlayerIframe);
+        waitUtils.sleepMs(500);
         actionUtils.scrollToElementJS(videoPlayerPlayButton);
+
         videoPlayerPlayButton.click();
         driver.switchTo().defaultContent();
     }

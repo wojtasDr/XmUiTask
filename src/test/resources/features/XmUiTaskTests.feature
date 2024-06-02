@@ -14,7 +14,6 @@ Scenario: Check if Economic Calendar slider set dates correctly
 
   Scenario: Check if Educational Video plays correctly
     Given Home page is opened
-#    And All cookies are accepted
     When I click "Research&Education" main menu link
     And I click "Educational Videos" link in "Research&Education" submenu
     And I show "Into The Markets" panel
