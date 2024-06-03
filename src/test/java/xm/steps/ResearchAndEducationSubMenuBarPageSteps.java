@@ -1,11 +1,13 @@
 package xm.steps;
 
 import io.cucumber.java8.En;
+import org.springframework.beans.factory.annotation.Autowired;
 import xm.pages.ResearchAndEducationSubMenuBarPage;
 
 public class ResearchAndEducationSubMenuBarPageSteps implements En {
-    private ResearchAndEducationSubMenuBarPage researchAndEducationSubMenuBarPage;
+    private final ResearchAndEducationSubMenuBarPage researchAndEducationSubMenuBarPage;
 
+    @Autowired
     public ResearchAndEducationSubMenuBarPageSteps(ResearchAndEducationSubMenuBarPage researchAndEducationSubMenuBarPage) {
         this.researchAndEducationSubMenuBarPage = researchAndEducationSubMenuBarPage;
 

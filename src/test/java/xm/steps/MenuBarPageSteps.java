@@ -1,11 +1,13 @@
 package xm.steps;
 
 import io.cucumber.java8.En;
+import org.springframework.beans.factory.annotation.Autowired;
 import xm.pages.MenuBarPage;
 
 public class MenuBarPageSteps implements En {
-    private MenuBarPage menuBarPage;
+    private final MenuBarPage menuBarPage;
 
+    @Autowired
     public MenuBarPageSteps(MenuBarPage menuBarPage) {
         this.menuBarPage = menuBarPage;
 

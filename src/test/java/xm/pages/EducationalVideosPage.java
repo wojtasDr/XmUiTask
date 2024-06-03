@@ -31,15 +31,15 @@ public abstract class EducationalVideosPage extends BaseTestPage {
     }
 
     @Autowired
+    protected WaitUtils waitUtils;
+
+    @Autowired
+    protected ActionUtils actionUtils;
+
+    @Autowired
     public EducationalVideosPage(WebDriver driver) {
         this.driver = driver;
     }
-
-    @Autowired
-    WaitUtils waitUtils;
-
-    @Autowired
-    ActionUtils actionUtils;
 
     public void showIntoTheMarketPanel() {
         actionUtils.scrollToElementJS(intoTheMarketsPanel);

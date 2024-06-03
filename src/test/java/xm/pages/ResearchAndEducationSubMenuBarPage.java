@@ -11,7 +11,7 @@ public abstract class ResearchAndEducationSubMenuBarPage extends BaseTestPage {
     private WebElement educationalVideosLink;
 
     @Autowired
-    ActionUtils actionUtils;
+    protected ActionUtils actionUtils;
 
     @Autowired
     public ResearchAndEducationSubMenuBarPage(WebDriver driver) {

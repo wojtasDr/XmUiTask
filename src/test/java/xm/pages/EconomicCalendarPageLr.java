@@ -16,7 +16,7 @@ public class EconomicCalendarPageLr extends EconomicCalendarPage {
     private WebElement showCalendarSliderButton;
 
     @Autowired
-    ActionUtils actionUtils;
+    private ActionUtils actionUtils;
 
     @Autowired
     public EconomicCalendarPageLr(WebDriver driver) {

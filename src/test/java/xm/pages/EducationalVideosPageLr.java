@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 @Profile("chromeLowResolution")
 public class EducationalVideosPageLr extends EducationalVideosPage {
 
-
-
     @Autowired
     public EducationalVideosPageLr(WebDriver driver) {
         super(driver);

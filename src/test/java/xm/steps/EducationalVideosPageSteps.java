@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import xm.pages.EducationalVideosPage;
 
 public class EducationalVideosPageSteps implements En {
-    @Autowired
     private EducationalVideosPage educationalVideosPage;
 
+    @Autowired
     public EducationalVideosPageSteps(EducationalVideosPage educationalVideosPage) {
         this.educationalVideosPage = educationalVideosPage;
 

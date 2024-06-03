@@ -6,15 +6,13 @@ import xm.pages.HomePage;
 import xm.validators.CommonValidators;
 
 public class HomePageSteps implements En {
-
-    @Autowired
     private final HomePage homePage;
+    private final CommonValidators commonValidators;
 
     @Autowired
-    private CommonValidators commonValidators;
-
-    public HomePageSteps(HomePage homePage) {
+    public HomePageSteps(HomePage homePage, CommonValidators commonValidators) {
         this.homePage = homePage;
+        this.commonValidators = commonValidators;
 
         Given("^Home page is opened$", () -> {
             homePage.openHomePage();

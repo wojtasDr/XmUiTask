@@ -6,14 +6,13 @@ import xm.pages.EconomicCalendarPage;
 import xm.validators.EconomicCalendarPageValidators;
 
 public class EconomicCalendarPageSteps implements En {
-    @Autowired
-    private EconomicCalendarPage economicCalendarPage;
+    private final EconomicCalendarPage economicCalendarPage;
+    private final EconomicCalendarPageValidators economicCalendarPageValidators;
 
     @Autowired
-    private EconomicCalendarPageValidators economicCalendarPageValidators;
-
-    public EconomicCalendarPageSteps(EconomicCalendarPage economicCalendarPage) {
+    public EconomicCalendarPageSteps(EconomicCalendarPage economicCalendarPage, EconomicCalendarPageValidators economicCalendarPageValidators) {
         this.economicCalendarPage = economicCalendarPage;
+        this.economicCalendarPageValidators = economicCalendarPageValidators;
 
         When("^I set \"(Today|Tomorrow|Next Week)\" on slider$", economicCalendarPage::setSliderTo);
 
@@ -22,5 +21,4 @@ public class EconomicCalendarPageSteps implements En {
             economicCalendarPageValidators.checkIfActualDateIsSetCorrectly(actualDateString, actualDateLabel);
         });
     }
-
 }

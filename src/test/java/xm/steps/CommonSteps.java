@@ -5,10 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import xm.validators.CommonValidators;
 
 public class CommonSteps implements En {
+    private final CommonValidators commonValidators;
 
     @Autowired
-    CommonValidators commonValidators;
-
     public CommonSteps(CommonValidators commonValidators) {
         this.commonValidators = commonValidators;
 
