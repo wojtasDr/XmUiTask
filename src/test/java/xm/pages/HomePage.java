@@ -26,7 +26,10 @@ public class HomePage extends BaseTestPage {
         driver.get(xmHomePageUrl);
     }
 
-    public void acceptAllCookies() {
-        acceptAllCookiesButton.click();
+    public void acceptAllCookiesIfNecessary() {
+        if (!isCookiesAccepted) {
+            acceptAllCookiesButton.click();
+            isCookiesAccepted = true;
+        }
     }
 }

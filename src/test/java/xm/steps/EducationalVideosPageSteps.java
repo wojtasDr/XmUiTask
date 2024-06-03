@@ -15,11 +15,9 @@ public class EducationalVideosPageSteps implements En {
 
         When("I choose following video lesson {string}", educationalVideosPage::chooseVideoLessonWithName);
 
-        Then("I can play chosen video for at least {string}", (String timeToBeElapsed) -> {
+        Then("I can play chosen video for {string} seconds", (String timeToBeElapsed) -> {
             educationalVideosPage.playChosenVideo();
             educationalVideosPage.waitUntilVideoPlaysForSpecifiedTime(timeToBeElapsed);
         });
-
     }
-
 }

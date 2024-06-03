@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 public abstract class BaseTestPage {
     protected WebDriver driver;
 
+    protected boolean isCookiesAccepted;
+
     @PostConstruct
     private void initWebElements() {
         PageFactory.initElements(driver, this);
